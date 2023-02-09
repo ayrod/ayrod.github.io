@@ -118,7 +118,7 @@ function makeTable(parent){
 			txt+="<td><div id='row"+i+j+"' oncontextmenu='return false;'>"
 			for(k=0; k<dim[2]*dim[3]; k++){
 				txt+="<input type='button' id="+buttonId
-					+" value=' ' style='width: 25px; height: 25px; margin: 0px' onmousedown='mouseClic("
+					+" value=' ' style='width: 25px; height: 25px; margin: 0px; background-color: grey' onmousedown='mouseClic("
 					+buttonId+", event)' oncontextmenu='return false;'/>";
 				buttonId+=1
 			}
