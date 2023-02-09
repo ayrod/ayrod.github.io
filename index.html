@@ -21,12 +21,12 @@ potato
   }
   // Make sure the client is loaded and sign-in is complete before calling this method.
   function execute() {
-    return gapi.client.youtube.channels.list({
+    return gapi.client.youtube.videos.list({
       "part": [
         "snippet,contentDetails,statistics"
       ],
       "id": [
-        "UC_x5XG1OV2P6uZZ5FSM9Ttw"
+        "PdaAHMztNVE"
       ]
     })
         .then(function(response) {
@@ -41,7 +41,6 @@ potato
   gapi.load("client");
   
 </script>
- <! -- <button onclick="authenticate().then(loadClient)">authorize and load</button> -->
 <button onclick="loadClient()">load</button>
 <button onclick="execute()">execute</button>
 
