@@ -1,5 +1,5 @@
 <html><script src="https://apis.google.com/js/api.js"></script>
-<p id="video id">enter video id here</p>
+<textarea id="video id">enter video id here</textarea>
 <p id="results">results appear here</p>
 <script>
   /**
@@ -26,14 +26,17 @@
       "part": [
         "snippet,contentDetails,statistics"
       ],
-      "id": [
+      /*"id": [
         "PdaAHMztNVE"
+      ]*/
+	  "id": [
+        document.getElementById("id").innerHTML
       ]
     })
         .then(function(response) {
                 // Handle the results here (response.result has the parsed body).
                 console.log("Response", response);
-				document.getElementById("response").innerHTML=response.result
+				document.getElementById("results").innerHTML=response.result
               },
               function(err) { console.error("Execute error", err); });
   }
