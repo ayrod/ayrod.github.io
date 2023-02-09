@@ -14,7 +14,7 @@
         .then(function() { console.log("Sign-in successful"); },
               function(err) { console.error("Error signing in", err); });
   }*/
-  id1 = "PdaAHMztNVE"
+  //id1 = "PdaAHMztNVE"
   function loadClient() {
     gapi.client.setApiKey("AIzaSyCF6eo9HTxLsPQu3Q1qdWkQLxQ_9dHNj2Q");
     return gapi.client.load("https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest")
@@ -27,15 +27,15 @@
       "part": [
         "snippet,contentDetails,statistics"
       ],
-      "id": [
+      /*"id": [
         id1
-      ]
+      ]*/
       /*"id": [
         "PdaAHMztNVE"
       ]*/
-	  /*"id": [
-        document.getElementById("video id").innerHTML
-      ]*/
+	  "id": [
+        document.getElementById("video id").value
+      ]
     })
         .then(function(response) {
                 // Handle the results here (response.result has the parsed body).
