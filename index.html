@@ -1,5 +1,6 @@
 <html><script src="https://apis.google.com/js/api.js"></script>
-potato
+<p id="video id">enter video id here</p>
+<p id="results">results appear here</p>
 <script>
   /**
    * Sample JavaScript code for youtube.channels.list
@@ -32,6 +33,7 @@ potato
         .then(function(response) {
                 // Handle the results here (response.result has the parsed body).
                 console.log("Response", response);
+				document.getElementById("response").innerHTML=response.result
               },
               function(err) { console.error("Execute error", err); });
   }
